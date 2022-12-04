@@ -1,15 +1,15 @@
 #taking a string and converting into digit to find prime and composite number between the range A and B
-A=input('Enter the value of A:')
-B=input('Enter the value of B:')
-def prime_and_composite(A,B):# using def function to call a function
+Z=input('Enter the value of A:')
+X=input('Enter the value of B:')
+def prime_and_composite(Z,X):# using def function to call a function
     c=0
     p=0
 
-    if (A.isdigit() and B.isdigit()) or (A.lstrip('+').isdigit() and B.isdigit()) or (B.lstrip('+').isdigit() and A.isdigit() )or (A.lstrip('+').isdigit() and B.lstrip('+').isdigit()) or (B.lstrip('+').isdigit() and A.lstrip('+').isdigit() ) :
+    if (Z.isdigit() and X.isdigit()) or (Z.lstrip('+').isdigit() and X.isdigit()) or (X.lstrip('+').isdigit() and Z.isdigit() )or (Z.lstrip('+').isdigit() and X.lstrip('+').isdigit()) or (X.lstrip('+').isdigit() and Z.lstrip('+').isdigit() ) :
     #The isdigit() method returns True if all the characters are digits, otherwise False.
     #The lstrip() method returns a copy of the string with specified characters removed
-        a=int(A)
-        b=int(B)
+        a=int(Z)
+        b=int(X)
         if a<b:
             for a in range(a,b+1):
             #we are using b+1 beacause range function didn't include till b 
@@ -51,9 +51,9 @@ def prime_and_composite(A,B):# using def function to call a function
                     print()
     
             print("{} prime and {} composite number in range.".format(p,c))
-    elif (A.lstrip('-').isdigit() and B.isdigit()) or (B.lstrip('-').isdigit() and A.isdigit()) or (A.lstrip('+').isdigit() and B.isdigit()) or (B.lstrip('+').isdigit() and A.isdigit() ) :
-        a=int(A)
-        b=int(B)
+    elif (Z.lstrip('-').isdigit() and X.isdigit()) or (X.lstrip('-').isdigit() and Z.isdigit()) or (X.lstrip('+').isdigit() and X.isdigit()) or (X.lstrip('+').isdigit() and Z.isdigit() ) :
+        a=int(Z)
+        b=int(X)
         if a<b:
             for a in range(a,b+1):
                 x=1
@@ -95,7 +95,7 @@ def prime_and_composite(A,B):# using def function to call a function
     
             print("{} prime and {} composite number in range.".format(p,c))
     
-    elif  type(A)==str or type(B)==str or A.isdecimal() or B.isdecimal():#.isdecimal function is used to check string is in decimal or not
+    elif  type(Z)==str or type(X)==str or Z.isdecimal() or X.isdecimal():#.isdecimal function is used to check string is in decimal or not
     
         print(" can not find prime and composite number between this range.")
     
